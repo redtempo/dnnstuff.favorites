@@ -1,0 +1,22 @@
+﻿-- tables
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite](
+	[FavoriteId] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [int] NOT NULL,
+	[TabId] [int] NOT NULL,
+ CONSTRAINT [PK_{objectQualifier}DNNStuff_Favorites_Favorite] PRIMARY KEY CLUSTERED 
+(
+	[FavoriteId] ASC
+)
+)
+GO
+
+-- references
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite] WITH CHECK ADD CONSTRAINT [FK_DNNStuff_Favorites_Favorite_Tab] FOREIGN KEY([TabId])
+REFERENCES {databaseOwner}[{objectQualifier}Tabs] ([TabId])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite] WITH CHECK ADD CONSTRAINT [FK_DNNStuff_Favorites_Favorite_User] FOREIGN KEY([UserId])
+REFERENCES {databaseOwner}[{objectQualifier}Users] ([UserId])
+ON DELETE CASCADE
+GO

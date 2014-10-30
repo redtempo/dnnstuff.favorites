@@ -1,0 +1,26 @@
+﻿-- procs
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE ID = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorite]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+    DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorite];
+GO
+
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE ID = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorites]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+    DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorites];
+GO
+
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE ID = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DNNStuff_Favorites_UpdateFavorite]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+    DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_UpdateFavorite];
+GO
+
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE ID = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DNNStuff_Favorites_AddFavorite]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+    DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_AddFavorite];
+GO
+
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE ID = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DNNStuff_Favorites_DeleteFavorite]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+    DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_DeleteFavorite];
+GO
+
+-- tables
+IF EXISTS (SELECT * FROM SYSOBJECTS WHERE ID = OBJECT_ID(N'{databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+    DROP TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite];
+GO
+

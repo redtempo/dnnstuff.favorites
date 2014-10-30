@@ -1,0 +1,136 @@
+﻿ALTER TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite] ADD
+	PageUrl nvarchar(2000) NULL,
+	PageTitle nvarchar(2000) NULL
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite] ADD CONSTRAINT
+	DF_DNNStuff_Favorites_Favorite_PageUrl DEFAULT '' FOR PageUrl
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite] ADD CONSTRAINT
+	DF_DNNStuff_Favorites_Favorite_PageTitle DEFAULT '' FOR PageTitle
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_AddFavorite]
+(
+	@UserId int,
+	@TabId int,
+	@PageUrl nvarchar(2000),
+	@PageTitle nvarchar(2000)
+)
+AS
+BEGIN
+
+
+	INSERT
+	INTO {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite]
+	(
+		[UserId],
+		[TabId],
+		[PageUrl],
+		[PageTitle]
+	)
+	VALUES
+	(
+		@UserId,
+		@TabId,
+		@PageUrl,
+		@PageTitle
+	)
+	
+END
+
+
+GO
+
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_DeleteFavorite]
+(
+	@FavoriteId int
+)
+AS
+BEGIN
+
+	DELETE
+	FROM {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite]
+	WHERE
+		[FavoriteId] = @FavoriteId
+END
+
+
+GO
+
+
+
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorite]
+(
+	@FavoriteId int
+)
+AS
+BEGIN
+
+	SELECT
+		[FavoriteId],
+		[UserId],
+		[TabId],
+		[PageUrl],
+		[PageTitle]
+	FROM {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite]
+	WHERE
+		([FavoriteId] = @FavoriteId)
+
+END
+
+
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorites]
+(
+@UserId int
+)
+AS
+BEGIN
+
+	SELECT
+		[FavoriteId],
+		[UserId],
+		[TabId],
+		[PageUrl],
+		[PageTitle]
+	FROM {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite]
+	WHERE UserId = @UserId
+END
+
+
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_UpdateFavorite]
+(
+	@FavoriteId int,
+	@UserId int,
+	@TabId int,
+	@PageUrl nvarchar(2000),
+	@PageTitle nvarchar(2000)
+)
+AS
+BEGIN
+
+	UPDATE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite]
+	SET
+		[UserId] = @UserId,
+		[TabId] = @TabId,
+		[PageUrl] = @PageUrl,
+		[PageTitle] = @PageTitle
+
+	WHERE
+		[FavoriteId] = @FavoriteId
+
+END
+
+
+GO
+
+
+
+

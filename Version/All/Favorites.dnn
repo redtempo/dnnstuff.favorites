@@ -1,0 +1,119 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="DNNStuff - Favorites" type="Module" version="">
+      <friendlyName>DNNStuff - Favorites</friendlyName>
+      <description>Allows users to maintain a list of their personal favorite tabs</description>
+      <owner>
+        <name>Richard Edwards</name>
+        <organization>DNNStuff</organization>
+        <url>
+          <![CDATA[Web: <a href="http://www.dnnstuff.com/" target="_blank">www.dnnstuff.com</a>, Twitter: <a href="http://www.twitter.com/dnnstuff" target="_blank">http://www.twitter.com/dnnstuff</a>, Facebook: <a href="https://www.facebook.com/pages/DNNStuff/206502112775818" target="_blank">http://www.facebook.com/dnnstuff</a><br /><i><strong>(All links open in a new window and won't interupt your install!)</strong></i>]]>
+        </url>
+        <email>
+          <![CDATA[<a href="mailto:support@dnnstuff.com">support@dnnstuff.com</a>]]>
+        </email>
+      </owner>
+      <license src="License.html" />
+      <releaseNotes src="Version_Current.html" />
+	  <azureCompatible>true</azureCompatible>
+      <dependencies>
+        <dependency type="CoreVersion">05.02.03</dependency>
+      </dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNStuff - Favorites</moduleName>
+            <foldername>DNNStuff - Favorites</foldername>
+            <businessControllerClass>DNNStuff.Favorites.FavoritesController, DNNStuff.Favorites</businessControllerClass>
+            <supportedFeatures>
+              <supportedFeature type="Portable" />
+              <supportedFeature type="Upgradeable" />
+            </supportedFeatures>
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>DNNStuff - Favorites</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey></controlKey>
+                    <controlSrc>DesktopModules/DNNStuff - Favorites/View.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>ViewOptions</controlKey>
+                    <controlTitle>View Options</controlTitle>
+                    <controlSrc>DesktopModules/DNNStuff - Favorites/ViewOptions.ascx</controlSrc>
+                    <controlType>Edit</controlType>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>FAVORITES_TOGGLE</controlKey>
+                    <controlSrc>DesktopModules/DNNStuff - Favorites/ToggleSkinObject.ascx</controlSrc>
+                    <controlType>SkinObject</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+              <moduleDefinition>
+                <friendlyName>DNNStuff - Favorites Toggle</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey></controlKey>
+                    <controlSrc>DesktopModules/DNNStuff - Favorites/ToggleView.ascx</controlSrc>
+                    <controlType>View</controlType>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>ToggleViewOptions</controlKey>
+                    <controlTitle>Toggle View Options</controlTitle>
+                    <controlSrc>DesktopModules/DNNStuff - Favorites/ToggleViewOptions.ascx</controlSrc>
+                    <controlType>Edit</controlType>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <basePath>bin</basePath>
+            <assembly>
+              <name>DNNStuff.Favorites.dll</name>
+              <sourceFileName>DNNStuff.Favorites.dll</sourceFileName>
+            </assembly>
+            <assembly>
+              <name>DNNStuff.Utilities.dll</name>
+              <sourceFileName>DNNStuff.Utilities.dll</sourceFileName>
+            </assembly>
+          </assemblies>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules\DNNStuff - Favorites</basePath>
+            <resourceFile>
+              <name>resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\DNNStuff - Favorites</basePath>
+            <script type="Install">
+              <name>01.00.00.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+            <script type="Install">
+              <name>01.01.00.SqlDataProvider</name>
+              <version>01.01.00</version>
+            </script>
+            <script type="Install">
+              <name>01.06.00.SqlDataProvider</name>
+              <version>01.06.00</version>
+            </script>
+            <script type="UnInstall">
+              <name>Uninstall.SqlDataProvider</name>
+            </script>
+          </scripts>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

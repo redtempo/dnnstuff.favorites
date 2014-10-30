@@ -1,0 +1,21 @@
+﻿ALTER PROCEDURE {databaseOwner}[{objectQualifier}DNNStuff_Favorites_GetFavorites]
+(
+@UserId int,
+@PortalId int
+)
+AS
+BEGIN
+
+
+	SELECT
+		F.[FavoriteId],
+		F.[UserId],
+		F.[TabId],
+		F.[PageUrl],
+		F.[PageTitle]
+	FROM {databaseOwner}[{objectQualifier}DNNStuff_Favorites_Favorite] F
+	INNER JOIN {databaseOwner}[{objectQualifier}Tabs] T ON F.TabId = T.TabID
+	WHERE F.UserId = @UserId
+	AND T.PortalID = @PortalId
+
+END

@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22B3EC39-D311-424F-B899-A822B8709767}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DNNStuff.Favorites</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DNNVERSION="DNN6"</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DNNVERSION="DNN6"</DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DNNVERSION="DNN6"</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke">
+      <Name>DotNetNuke</Name>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke7\DotNetNuke.dll</HintPath>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN5' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke5\DotNetNuke.dll</HintPath>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN6' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke6\DotNetNuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetNuke.WebUtility">
+      <Name>DotNetNuke.WebUtility</Name>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke7\DotNetNuke.WebUtility.dll</HintPath>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN5' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke5\DotNetNuke.WebUtility.dll</HintPath>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN6' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke6\DotNetNuke.WebUtility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DNNStuff.Utilities, Version=1.0.0.14263, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\RICHARD-SERVER\Shared Files\Development\BIN\Various\DNNStuff.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <Name>Microsoft.ApplicationBlocks.Data</Name>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke7\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN5' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke5\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <HintPath Condition=" '$(DNNVERSION)' == 'DNN6' ">\\RICHARD-SERVER\Shared Files\Development\BIN\DotNetNuke6\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Data" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="System.Web.UI.WebControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Data\DataProvider.vb" />
+    <Compile Include="Components\Data\SqlDataProvider.vb" />
+    <Compile Include="Components\Helpers\ToggleSettings.vb" />
+    <Compile Include="Components\Helpers\TokenReplacement.vb" />
+    <Compile Include="ToggleSkinObject.ascx.designer.vb">
+      <DependentUpon>ToggleSkinObject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleSkinObject.ascx.vb">
+      <DependentUpon>ToggleSkinObject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToggleView.ascx.designer.vb">
+      <DependentUpon>ToggleView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleView.ascx.vb">
+      <DependentUpon>ToggleView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToggleViewOptions.ascx.designer.vb">
+      <DependentUpon>ToggleViewOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleViewOptions.ascx.vb">
+      <DependentUpon>ToggleViewOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToggleControl.ascx.designer.vb">
+      <DependentUpon>ToggleControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleControl.ascx.vb">
+      <DependentUpon>ToggleControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_LocalResources\ViewOptions.ascx.resx" />
+    <Content Include="Resources\Support\close-icn.png" />
+    <Content Include="Resources\Support\down-icn.png" />
+    <Content Include="Resources\Support\edit_5.css" />
+    <Content Include="Resources\Support\error-icn.png" />
+    <Content Include="Resources\Support\errorbg.gif" />
+    <Content Include="Resources\Support\help-icn.png" />
+    <Content Include="Resources\Support\success-icn.png" />
+    <Content Include="Resources\Support\up-icn.png" />
+    <Content Include="Resources\Support\warning-icn.png" />
+    <Content Include="ToggleSkinObject.ascx" />
+    <Content Include="ToggleView.ascx" />
+    <Content Include="ToggleViewOptions.ascx" />
+    <Content Include="Resources\Support\alert.png" />
+    <Content Include="Resources\Support\edit.css" />
+    <Content Include="Resources\Support\pixel.gif" />
+    <Content Include="Resources\Support\yetii-min.js" />
+    <Content Include="Module.css" />
+    <Content Include="ToggleControl.ascx" />
+    <Content Include="Version\All\application.gif" />
+    <Content Include="Version\All\License.html" />
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Business\Common.vb" />
+    <Compile Include="Components\Data\DataController.vb" />
+    <Compile Include="Components\Helpers\DNNUtilities.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Helpers\FavoritesSettings.vb" />
+    <Compile Include="ViewOptions.ascx.designer.vb">
+      <DependentUpon>ViewOptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOptions.ascx.vb">
+      <DependentUpon>ViewOptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View.ascx.designer.vb">
+      <DependentUpon>View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View.ascx.vb">
+      <DependentUpon>View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <None Include="Build\Build.bat" />
+    <None Include="Build\BuildFinal.bat" />
+    <None Include="Build\DeployFinal.bat" />
+    <None Include="Build\ModuleSpecific.targets" />
+    <Content Include="Version\All\Version_Current.md" />
+    <None Include="Version\Data\01.00.00.SqlDataProvider" />
+    <None Include="Version\Data\01.01.00.SqlDataProvider" />
+    <Content Include="Version\Data\01.06.00.SqlDataProvider" />
+    <None Include="Version\Data\Uninstall.SqlDataProvider" />
+    <None Include="Version\All\Favorites.dnn" />
+    <Content Include="Version\Documentation\configuration.html.md" />
+    <Content Include="Version\Documentation\index.html.md" />
+    <Content Include="Version\Documentation\installation.html.md" />
+    <Content Include="Version\Documentation\releases.html.md" />
+    <Content Include="Version\Documentation\tokens.html.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\View.ascx.resx" />
+    <Content Include="ViewOptions.ascx" />
+    <Content Include="View.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ToggleSkinObject.ascx.resx" />
+    <Content Include="App_LocalResources\ToggleView.ascx.resx" />
+    <Content Include="App_LocalResources\ToggleViewOptions.ascx.resx" />
+    <EmbeddedResource Include="ToggleSkinObject.ascx.resx">
+      <DependentUpon>ToggleSkinObject.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToggleView.ascx.resx">
+      <DependentUpon>ToggleView.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToggleViewOptions.ascx.resx">
+      <DependentUpon>ToggleViewOptions.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOptions.ascx.resx">
+      <DependentUpon>ViewOptions.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View.ascx.resx">
+      <DependentUpon>View.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+    <Folder Include="Version\Documentation\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1124</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://dev.dnn6/DesktopModules/DNNStuff - Favorites</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://dev.dnn6/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://dev.dnn6/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+</Project>
