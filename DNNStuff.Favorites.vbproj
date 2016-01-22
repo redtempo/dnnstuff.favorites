@@ -44,7 +44,7 @@
     <SccProvider>
     </SccProvider>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <TargetFrameworkProfile />
     <IISExpressSSLPort />
@@ -54,7 +54,7 @@
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\dnn8.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
     <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -73,7 +73,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\dnn8.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
     <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -93,7 +93,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\..\dnn8.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <BaseAddress>285212672</BaseAddress>
@@ -301,12 +301,12 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1124</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://dnn8.dev.com/DesktopModules/DNNStuff - Favorites</IISUrl>
+          <IISUrl>http://dnn7.dev.com/DesktopModules/DNNStuff - Favorites</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://dnn8.dev.com/</IISAppRootUrl>
+          <IISAppRootUrl>http://dnn7.dev.com/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>http://dnn8.dev.com/</CustomServerUrl>
+          <CustomServerUrl>http://dnn7.dev.com/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
