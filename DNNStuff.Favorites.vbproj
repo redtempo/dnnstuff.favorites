@@ -52,9 +52,12 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\sites\dnn7.dnndev.me\bin\</OutputPath>
     <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -73,7 +76,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -91,41 +94,22 @@
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>none</DebugType>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
-    <BaseAddress>285212672</BaseAddress>
-    <DocumentationFile>DNNStuff.Favorites.xml</DocumentationFile>
-    <Optimize>true</Optimize>
-    <WarningLevel>1</WarningLevel>
-    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke">
-      <Name>DotNetNuke</Name>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">J:\TOOLING\BIN\DotNetNuke7\DotNetNuke.dll</HintPath>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN8' ">J:\TOOLING\BIN\DotNetNuke8\DotNetNuke.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke, Version=7.2.0.613, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.7.2.0.613\lib\net40\DotNetNuke.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetNuke.WebUtility">
-      <Name>DotNetNuke.WebUtility</Name>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">J:\TOOLING\BIN\DotNetNuke7\DotNetNuke.WebUtility.dll</HintPath>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN8' ">J:\TOOLING\BIN\DotNetNuke8\DotNetNuke.WebUtility.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke.Web, Version=7.2.0.613, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.7.2.0.613\lib\net40\DotNetNuke.Web.dll</HintPath>
     </Reference>
     <Reference Include="DNNStuff.Utilities, Version=1.0.0.14263, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>J:\TOOLING\BIN\Various\DNNStuff.Utilities.dll</HintPath>
+      <HintPath>refs\DNNStuff.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
-      <Name>Microsoft.ApplicationBlocks.Data</Name>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">J:\TOOLING\BIN\DotNetNuke7\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN8' ">J:\TOOLING\BIN\DotNetNuke8\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.7.2.0.613\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationBlocks.Data.2.0.0\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic">
       <Name>Microsoft.VisualBasic</Name>
@@ -145,6 +129,9 @@
       <Name>System.XML</Name>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Web.7.2.0.613\lib\net40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -210,7 +197,6 @@
     <Content Include="Module.css" />
     <Content Include="ToggleControl.ascx" />
     <Content Include="Version\All\application.gif" />
-    <Content Include="Version\All\License.html" />
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -235,20 +221,21 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <None Include="Build\Build.bat" />
-    <None Include="Build\BuildFinal.bat" />
-    <None Include="Build\DeployFinal.bat" />
     <None Include="Build\ModuleSpecific.targets" />
-    <Content Include="Version\All\Version_Current.md" />
+    <Content Include="LICENSE" />
+    <None Include="packages.config" />
+    <Content Include="README.md" />
     <None Include="Version\Data\01.00.00.SqlDataProvider" />
     <None Include="Version\Data\01.01.00.SqlDataProvider" />
+    <Content Include="Version\All\Release.html" />
     <Content Include="Version\Data\01.06.00.SqlDataProvider" />
     <None Include="Version\Data\Uninstall.SqlDataProvider" />
     <None Include="Version\All\Favorites.dnn" />
-    <Content Include="Version\Documentation\configuration.html.md" />
-    <Content Include="Version\Documentation\index.html.md" />
-    <Content Include="Version\Documentation\installation.html.md" />
-    <Content Include="Version\Documentation\releases.html.md" />
-    <Content Include="Version\Documentation\tokens.html.md" />
+    <Content Include="docs\configuration.md" />
+    <Content Include="docs\index.md" />
+    <Content Include="docs\installation.md" />
+    <Content Include="docs\releases.md" />
+    <Content Include="docs\tokens.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\View.ascx.resx" />
@@ -276,8 +263,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="docs\images\" />
     <Folder Include="My Project\" />
-    <Folder Include="Version\Documentation\images\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -301,12 +288,12 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1124</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://dnn7.dev.com/DesktopModules/DNNStuff - Favorites</IISUrl>
+          <IISUrl>http://dnn7.dnndev.me/DesktopModules/DNNStuff - Favorites</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://dnn7.dev.com</IISAppRootUrl>
+          <IISAppRootUrl>http://dnn7.dnndev.me</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>http://dnn7.dev.com/</CustomServerUrl>
+          <CustomServerUrl>http://dnn7.dnndev.me/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -314,4 +301,11 @@
   </ProjectExtensions>
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets'))" />
+  </Target>
 </Project>

@@ -1,12 +1,3 @@
-'***************************************************************************/
-'* Copyright (c) 2010 by DNNStuff.
-'* All rights reserved.
-'*
-'* Date:        August 20,2010
-'* Author:      Richard Edwards
-'* Description: DotNetNuke Module for displaying Favorites
-'*************/
-
 Option Strict On
 Option Explicit On 
 

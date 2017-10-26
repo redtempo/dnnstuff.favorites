@@ -1,10 +1,5 @@
 # Favorites Tokens 
 
-## What are tokens?
-
-See [Tokens](/pages/tokens) for a general overview of tokens and the
-standard token support across most DNNStuff modules
-
 ## Welcome Specific Tokens
 
 -   [IMAGEURL] - url to the site images folder

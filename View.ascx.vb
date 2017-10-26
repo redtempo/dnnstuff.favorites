@@ -1,12 +1,3 @@
-'***************************************************************************/
-'* Copyright (c) 2010 by DNNStuff.
-'* All rights reserved.
-'*
-'* Date:        August 20,2010
-'* Author:      Richard Edwards
-'* Description: DotNetNuke Module for displaying Favorites
-'*************/
-
 Imports DotNetNuke
 Imports DotNetNuke.Services.Localization
 
@@ -59,9 +50,6 @@ Namespace DNNStuff.Favorites
 
         Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-#If Config = "Trial" Then
-            Common.AddTrialNotice(phText)
-#End If
             If HttpContext.Current.User.Identity.IsAuthenticated Then
                 BindFavs()
             Else

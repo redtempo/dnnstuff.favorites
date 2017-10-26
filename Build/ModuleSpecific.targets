@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Company>DNNStuff</Company>
+    <ProductName>Favorites</ProductName>
+  </PropertyGroup>
+  <ItemGroup>
+		<ProjectToBuild Include="..\$(Company).$(ProductName).vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MyResourceFiles Include="..\*.ascx" />
+    <MyResourceFiles Include="..\App_LocalResources\*.resx" />
+    <MyResourceFiles Include="..\Resources\**\*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MyContentFiles Include="..\version\all\*.*" />
+    <MyContentFiles Include="..\version\data\*.*" />
+    <MyContentFiles Include="..\refs\*.*" />
+    <MyContentFiles Include="..\LICENSE" />
+  </ItemGroup>
+
+  <Import Project="DNNInstall.targets" />
+</Project>
