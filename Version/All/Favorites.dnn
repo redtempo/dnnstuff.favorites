@@ -3,7 +3,7 @@
     <package name="DNNStuff - Favorites" type="Module" version="">
       <friendlyName>DNNStuff - Favorites</friendlyName>
       <description>Allows users to maintain a list of their personal favorite tabs</description>
-      <iconFile>~/DesktopModules/DNNStuff - Favorites/application.gif</iconFile>
+      <iconFile>~/DesktopModules/DNNStuff - Favorites/resources/application.gif</iconFile>
       <owner>
         <name>Richard Edwards</name>
         <organization>Red Tempo Software Inc.</organization>
