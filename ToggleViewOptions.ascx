@@ -3,10 +3,6 @@
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <div class="dnnForm dnnClear">
     <div id="editsettings" class="tabslayout">
-        <ul id="editsettings-nav" class="tabslayout">
-            <li><a href="#tab1"><span>
-                <%= Localization.GetString("TabCaption_Tab1", LocalResourceFile)%></span></a></li>
-        </ul>
         <div class="tabs-container">
             <div class="tab" id="tab1">
                 <div class="dnnFormItem">
@@ -29,9 +25,4 @@
                 runat="server" CssClass="dnnSecondaryAction" /></li>
     </ul>
 </div>
-<script type="text/javascript">
-    var tabber1 = new Yetii({
-        id: 'editsettings',
-        persist: true
-    });
-</script>
+
