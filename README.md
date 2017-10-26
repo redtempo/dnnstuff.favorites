@@ -1,13 +1,13 @@
-# Inject Anything Module for DNN (DotNetNuke)
+# Favorites Module for DNN (DotNetNuke)
 
-A DNN module that allows you to inject javascript/vbscript/css into your page
+A DNN module that allows a user to maintain a list of their favorite pages
 
 ## Minimum DNN Version
 
 Current releases support DNN 7.2.0 and later
 
 ## Releases
-[Releases](https://github.com/redtempo/dnnstuff.injectanything/releases)
+[Releases](https://github.com/redtempo/dnnstuff.favorites/releases)
 
 ## Documentation
-[Documentation](https://redtempo.github.io/dnnstuff.injectanything/)
+[Documentation](https://redtempo.github.io/dnnstuff.favorites/)
